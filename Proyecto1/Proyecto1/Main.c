@@ -1,17 +1,41 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "pq.h"
 
 int main() {
+    // Crear la cola de prioridad
     PQ* pq = pq_create();
 
-    // Leer y mostrar el contenido de un archivo de texto
-    read_txt("test1.txt", pq);
+    // Agregar algunos elementos a la cola de prioridad
+    int valor1 = 10;
+    int valor2 = 20;
+    int valor3 = 5;
+    int valor4 = 15;
 
-    print_list(pq);
+    pq_add(pq, &valor1, 2);
+    pq_add(pq, &valor2, 4);
+    pq_add(pq, &valor3, 1);
+    pq_add(pq, &valor4, 3);
+
+    // Imprimir la lista de elementos en la cola de prioridad
+    printf("Lista de elementos en la cola de prioridad:\n");
+    imprimir_lista(pq);
+    printf("\n");
+
+    // Sacar el valor de menor prioridad de la cola de prioridad
+    void* retVal;
+    pq_remove(pq, &retVal);
+    printf("Valor removido de la cola de prioridad: %d\n", *(int*)retVal);
+
+    // Imprimir la lista de elementos en la cola de prioridad después de la eliminación
+    printf("\nLista de elementos en la cola de prioridad después de la eliminación:\n");
+    imprimir_lista(pq);
+    printf("\n");
 
 
-    //printf_s("%d \n", pq_size(pq));
+    leer_archivo("test1.txt", pq);
+
+    // Destruir la cola de prioridad
+    pq_destroy(pq);
 
     return 0;
 }

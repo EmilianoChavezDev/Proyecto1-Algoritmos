@@ -1,19 +1,14 @@
-﻿  Main.c
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\Main.c(9,27): warning C4047: 'función': 'PQ' es distinto en los niveles de direccionamiento indirecto de 'PQ *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\Main.c(9,27): warning C4024: 'read_txt': tipos distintos para el parámetro formal y el parámetro real 2
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\Main.c(11,16): warning C4047: 'función': 'PQ' es distinto en los niveles de direccionamiento indirecto de 'PQ *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\Main.c(11,16): warning C4024: 'print_list': tipos distintos para el parámetro formal y el parámetro real 1
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\Main.c(6,9): warning C4047: 'inicializando': 'PQ *' es distinto en los niveles de direccionamiento indirecto de 'PQ'
-  pq.c
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(24,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(25,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(43,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(44,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(55,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(63,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(85,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(87,10): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'void *'
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(107,14): warning C4022: 'pq_add': no coincide el puntero para el parámetro real 2
-C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(119,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-  Generando código...
+﻿  pq.c
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(26,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(27,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(50,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(69,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(77,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(101,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(106,11): warning C4047: '=': 'PrioValue *' es distinto en los niveles de direccionamiento indirecto de 'PQ *'
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(107,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(158,2): warning C4098: 'propagarArriba': función 'void' que devuelve un valor
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(162,14): warning C4098: 'propagarArriba': función 'void' que devuelve un valor
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(159,14): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\PC\Desktop\Proyecto1\Proyecto1\pq.c(132): warning C4716: 'imprimir_lista': debe devolver un valor
   Proyecto1.vcxproj -> C:\Users\PC\Desktop\Proyecto1\x64\Debug\Proyecto1.exe
