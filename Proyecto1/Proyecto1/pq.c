@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h> 
 #include <stdio.h>
+#include <string.h>
 
 
 
@@ -54,7 +55,7 @@ BOOLEAN pq_remove(PQ* pq, void** retVal) {
 	}
 	*retVal = pq->arr[1]->value;// guarda el valor 
 
-	pq->arr[1] = pq->arr[pq->size-1];
+	pq->arr[1] = pq->arr[pq->size - 1];
 	pq->size--;
 
 	propagarAbajo(pq, 1);
@@ -124,30 +125,30 @@ BOOLEAN redimensionar(PQ* pq) {
 
 
 BOOLEAN imprimir_lista(PQ* pq) {
-	for (int i = 1; i <= pq->size - 1; i++) {
-		PrioValue pv = pq->arr[i];
-		printf("Prioridad: %d, Valor: %d\n", pv->prio, *(int*)(pv->value));
+	for (int i = 0; i <= pq->size - 1; i++) {
+		char c = *((char*)pq->arr[i]->value);
+		int frecuencia = pq->arr[i]->prio;
+		printf_s("%c , %i \n", c, frecuencia);
 	}
-
+	return TRUE;
 }
 
 void leer_archivo(char* archivo, PQ* pq) {
 	FILE* f = fopen(archivo, "r");
 
-	int i = 0;
+	int contador[128] = { 0 };
+	char c;
 
-	while (1) {
-		char c = fgetc(f);
-		if (feof(f)) {
-			break;
-		}
-
-		//printf_s("%c", c);
-
-		//pq_add(pq, c, i);
-		i++;
-
+	while ((c = fgetc(f)) != EOF) {
+		contador[(int)c]++;
 	}
+
+	for (int i = 0; i < 128; i++) {
+		if (contador[i] > 0) {
+			pq_add(pq, (char)i, contador[i]);
+		}
+	}
+
 	fclose(f);
 
 
