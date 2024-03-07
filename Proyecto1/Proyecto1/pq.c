@@ -12,7 +12,7 @@ retorna NULL si hubo error*/
 PQ* pq_create() {
 	PQ* pq = (PQ*)malloc(sizeof(struct Heap));
 	confirmNotNull(pq, "Error al crear la cola de prioridad");
-	pq->cap = 30;
+	pq->cap = 2;
 	pq->size = 1;
 	pq->arr = (void*)malloc(sizeof(void*) * pq->cap);
 	return pq;
@@ -102,9 +102,9 @@ BOOLEAN redimensionar(PQ* pq) {
 	confirmNotNull(pq, "Error al obtener el arreglo");
 
 
-	int capacidadNueva = pq->cap * 2;
+	int capacidadNueva = (int)pq->cap * 2;
 	PQ* aux = pq_create();
-	aux->arr = (PQ*)malloc(sizeof(PQ*) * capacidadNueva);
+	aux->arr = (void*)malloc(sizeof(void*) * capacidadNueva);
 	confirmNotNull(aux, "Error al crear el arreglo auxiliar");
 
 	aux->cap = capacidadNueva;
@@ -113,8 +113,6 @@ BOOLEAN redimensionar(PQ* pq) {
 	for (int i = 1; i <= pq->size; i++) {
 		aux->arr[i] = pq->arr[i];
 	}
-
-	free(pq->arr);
 	pq->arr = aux->arr;
 	pq->cap = aux->cap;
 
@@ -125,8 +123,8 @@ BOOLEAN redimensionar(PQ* pq) {
 
 
 BOOLEAN imprimir_lista(PQ* pq) {
-	for (int i = 0; i <= pq->size - 1; i++) {
-		char c = *((char*)pq->arr[i]->value);
+	for (int i = 1; i <= pq->size - 1; i++) {
+		char c = pq->arr[i]->value;
 		int frecuencia = pq->arr[i]->prio;
 		printf_s("%c , %i \n", c, frecuencia);
 	}
@@ -136,21 +134,23 @@ BOOLEAN imprimir_lista(PQ* pq) {
 void leer_archivo(char* archivo, PQ* pq) {
 	FILE* f = fopen(archivo, "r");
 
+	//Tabla ASCII con valores del 0 al 127 
 	int contador[128] = { 0 };
 	char c;
 
 	while ((c = fgetc(f)) != EOF) {
+		//Incrementar el contador de la cantidad de caracteres que se leen
 		contador[(int)c]++;
 	}
 
 	for (int i = 0; i < 128; i++) {
+		//Si el caracter se leyo en el archivo al menos 1 vez
 		if (contador[i] > 0) {
 			pq_add(pq, (char)i, contador[i]);
 		}
 	}
 
 	fclose(f);
-
 
 }
 

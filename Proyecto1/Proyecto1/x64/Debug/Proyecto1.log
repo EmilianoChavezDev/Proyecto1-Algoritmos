@@ -1,14 +1,14 @@
 ﻿  pq.c
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(27,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(28,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(51,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(70,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(78,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(102,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(107,11): warning C4047: '=': 'PrioValue *' es distinto en los niveles de direccionamiento indirecto de 'PQ *'
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(108,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(148,21): warning C4022: 'pq_add': no coincide el puntero para el parámetro real 2
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(159,2): warning C4098: 'propagarArriba': función 'void' que devuelve un valor
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(163,14): warning C4098: 'propagarArriba': función 'void' que devuelve un valor
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(160,14): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-  Proyecto1.vcxproj -> C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\x64\Debug\Proyecto1.exe
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(27,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(28,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(51,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(70,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(78,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(102,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(108,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(127,8): warning C4047: 'inicializando': 'char' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(149,21): warning C4022: 'pq_add': no coincide el puntero para el parámetro real 2
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(159,2): warning C4098: 'propagarArriba': función 'void' que devuelve un valor
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(163,14): warning C4098: 'propagarArriba': función 'void' que devuelve un valor
+C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(160,14): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+  Proyecto1.vcxproj -> C:\Users\Emiliano Miranda\Desktop\Proyecto1-Algoritmos\Proyecto1\x64\Debug\Proyecto1.exe
