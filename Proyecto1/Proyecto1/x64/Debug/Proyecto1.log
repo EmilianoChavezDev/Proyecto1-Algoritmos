@@ -8,8 +8,8 @@ C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(102,2): warnin
 C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(108,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
 C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(127,8): warning C4047: 'inicializando': 'char' es distinto en los niveles de direccionamiento indirecto de 'void *'
 C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(136,2): warning C4098: 'leer_archivo': función 'void' que devuelve un valor
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(155,41): warning C4022: 'pq_add': no coincide el puntero para el parámetro real 2
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(163,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(164,14): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(181): warning C4715: 'propagarArriba': no todas las rutas de acceso de control devuelven un valor
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(158,41): warning C4022: 'pq_add': no coincide el puntero para el parámetro real 2
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(166,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(167,14): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(184): warning C4715: 'propagarArriba': no todas las rutas de acceso de control devuelven un valor
   Proyecto1.vcxproj -> C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\x64\Debug\Proyecto1.exe

@@ -150,6 +150,7 @@ void leer_archivo(char* archivo, PQ* pq) {
 	} while (!feof(f));
 
 
+
 	//Agrego a la lista de prioridad
 	for (int i = 0; i < 128; i++) {
 		if (contador[i] > 0) pq_add(pq, (char)i, contador[i]);// Agrego el valor del caracter tanto las veces que se repite dentro del archivo
@@ -184,22 +185,20 @@ BOOLEAN propagarArriba(PQ* pq, int index) {
 BOOLEAN propagarAbajo(PQ* pq, int index) {
 	int hijoDerecho = (2 * index) + 1;
 	int hijoIzquierdo = 2 * index;
-	int actual = index;
+	int padre = index;
 
 
-	if (hijoIzquierdo <= pq->size - 1 && pq->arr[hijoIzquierdo]->prio < pq->arr[actual]->prio) {
-		PrioValue aux = pq->arr[actual];
-		pq->arr[actual] = pq->arr[hijoIzquierdo];
+	if (hijoIzquierdo <= pq->size - 1 && pq->arr[hijoIzquierdo]->prio < pq->arr[padre]->prio) {
+		PrioValue aux = pq->arr[padre];
+		pq->arr[padre] = pq->arr[hijoIzquierdo];
 		pq->arr[hijoIzquierdo] = aux;
-		actual = hijoIzquierdo;
 		propagarAbajo(pq, hijoIzquierdo);
 	}
 
-	if (hijoDerecho <= pq->size - 1 && pq->arr[hijoDerecho]->prio < pq->arr[index]->prio) {
-		PrioValue aux = pq->arr[actual];
-		pq->arr[actual] = pq->arr[hijoDerecho];
+	if (hijoDerecho <= pq->size - 1 && pq->arr[hijoDerecho]->prio < pq->arr[padre]->prio) {
+		PrioValue aux = pq->arr[padre];
+		pq->arr[padre] = pq->arr[hijoDerecho];
 		pq->arr[hijoDerecho] = aux;
-		actual = hijoDerecho;
 		propagarAbajo(pq, hijoDerecho);
 	}
 
