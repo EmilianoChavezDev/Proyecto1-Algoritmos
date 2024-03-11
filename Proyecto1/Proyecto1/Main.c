@@ -2,7 +2,6 @@
 #include "pq.h"
 
 int main() {
-    // Crear la cola de prioridad
     PQ* pq = pq_create();
 
 
@@ -10,6 +9,17 @@ int main() {
 
     imprimir_lista(pq);
     printf("\n");
+
+
+    printf_s("Nueva lista\n");
+    void* retVal = NULL;
+    pq_remove(pq, &retVal);
+
+    pq_remove(pq, &retVal);
+
+    pq_remove(pq, &retVal);
+
+    imprimir_lista(pq);
 
 
     return 0;

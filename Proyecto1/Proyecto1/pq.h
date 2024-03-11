@@ -73,7 +73,7 @@ void leer_archivo(char* archivo, PQ* pq);
 BOOLEAN redimensionar(PQ* pq);
 
 
-void propagarArriba(PQ* pq, int index);
+BOOLEAN propagarArriba(PQ* pq, int index);
 
 BOOLEAN propagarAbajo(PQ* pq, int index);
 

@@ -124,38 +124,42 @@ BOOLEAN redimensionar(PQ* pq) {
 
 BOOLEAN imprimir_lista(PQ* pq) {
 	for (int i = 1; i <= pq->size - 1; i++) {
-		char c = pq->arr[i]->value;
-		int frecuencia = pq->arr[i]->prio;
-		printf_s("%c , %i \n", c, frecuencia);
+		char caracter = pq->arr[i]->value;
+		int prio = pq->arr[i]->prio;
+		printf_s("%c , %i \n", caracter, prio);
 	}
 	return TRUE;
 }
 
 void leer_archivo(char* archivo, PQ* pq) {
 	FILE* f = fopen(archivo, "r");
+	confirmNotNull(archivo, "Error al obtener el archivo");
 
-	//Tabla ASCII con valores del 0 al 127 
+	//Arreglo para los caracteres ASCII
 	int contador[128] = { 0 };
 	char c;
 
-	while ((c = fgetc(f)) != EOF) {
-		//Incrementar el contador de la cantidad de caracteres que se leen
-		contador[(int)c]++;
-	}
 
+	//Incrementar el contador en la posicion ASCII  del caracter
+	do {
+
+		c = fgetc(f);
+
+		//Mientras el archivo siga abierto
+		if (c != EOF) contador[(int)c]++;
+	} while (!feof(f));
+
+
+	//Agrego a la lista de prioridad
 	for (int i = 0; i < 128; i++) {
-		//Si el caracter se leyo en el archivo al menos 1 vez
-		if (contador[i] > 0) {
-			pq_add(pq, (char)i, contador[i]);
-		}
+		if (contador[i] > 0) pq_add(pq, (char)i, contador[i]);// Agrego el valor del caracter tanto las veces que se repite dentro del archivo
+
 	}
 
 	fclose(f);
-
 }
 
-
-void propagarArriba(PQ* pq, int index) {
+BOOLEAN propagarArriba(PQ* pq, int index) {
 	confirmNotNull(pq, "Error al obtener el arreglo");
 	int padre = round((double)index / 2);
 
@@ -178,17 +182,17 @@ void propagarArriba(PQ* pq, int index) {
 
 
 BOOLEAN propagarAbajo(PQ* pq, int index) {
-	int hijoDerecho = 2 * index + 1;
+	int hijoDerecho = (2 * index) + 1;
 	int hijoIzquierdo = 2 * index;
 	int actual = index;
-	//index se pasa como 1
+
 
 	if (hijoIzquierdo <= pq->size - 1 && pq->arr[hijoIzquierdo]->prio < pq->arr[actual]->prio) {
 		PrioValue aux = pq->arr[actual];
 		pq->arr[actual] = pq->arr[hijoIzquierdo];
 		pq->arr[hijoIzquierdo] = aux;
 		actual = hijoIzquierdo;
-		return propagarAbajo(pq, hijoIzquierdo);
+		propagarAbajo(pq, hijoIzquierdo);
 	}
 
 	if (hijoDerecho <= pq->size - 1 && pq->arr[hijoDerecho]->prio < pq->arr[index]->prio) {
@@ -196,7 +200,7 @@ BOOLEAN propagarAbajo(PQ* pq, int index) {
 		pq->arr[actual] = pq->arr[hijoDerecho];
 		pq->arr[hijoDerecho] = aux;
 		actual = hijoDerecho;
-		return propagarAbajo(pq, hijoDerecho);
+		propagarAbajo(pq, hijoDerecho);
 	}
 
 
