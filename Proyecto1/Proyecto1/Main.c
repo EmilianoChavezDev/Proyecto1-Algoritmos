@@ -1,26 +1,20 @@
 #include <stdio.h>
 #include "pq.h"
 
-int main() {
-    PQ* pq = pq_create();
+void main() {
+	PQ* pq = pq_create();
 
 
-    leer_archivo("test1.txt", pq);
+	leer_archivo("test1.txt", pq);
+	void* retVal = NULL;
 
-    imprimir_lista(pq);
-    printf("\n");
-
-
-    printf_s("Nueva lista\n");
-    void* retVal = NULL;
-    pq_remove(pq, &retVal);
-
-    pq_remove(pq, &retVal);
-
-    pq_remove(pq, &retVal);
-
-    imprimir_lista(pq);
+	while (pq->size != 1)
+	{
+		pq_remove(pq, &retVal);
+		PrioValue pv = retVal;
+		printf("valor removido: %c -> prioridad: %i\n", pv->value, pv->prio);
+	}
 
 
-    return 0;
+
 }

@@ -53,7 +53,7 @@ BOOLEAN pq_remove(PQ* pq, void** retVal) {
 	if (pq->size == 1) {
 		return FALSE;
 	}
-	*retVal = pq->arr[1]->value;// guarda el valor 
+	*retVal = pq->arr[1];// guarda el valor 
 
 	pq->arr[1] = pq->arr[pq->size - 1];
 	pq->size--;
@@ -188,14 +188,14 @@ BOOLEAN propagarAbajo(PQ* pq, int index) {
 	int padre = index;
 
 
-	if (hijoIzquierdo <= pq->size - 1 && pq->arr[hijoIzquierdo]->prio < pq->arr[padre]->prio) {
+	if (hijoIzquierdo <= pq->size - 1 && pq->arr[hijoIzquierdo]->prio <= pq->arr[padre]->prio) {
 		PrioValue aux = pq->arr[padre];
 		pq->arr[padre] = pq->arr[hijoIzquierdo];
 		pq->arr[hijoIzquierdo] = aux;
 		propagarAbajo(pq, hijoIzquierdo);
 	}
 
-	if (hijoDerecho <= pq->size - 1 && pq->arr[hijoDerecho]->prio < pq->arr[padre]->prio) {
+	if (hijoDerecho <= pq->size - 1 && pq->arr[hijoDerecho]->prio <= pq->arr[padre]->prio) {
 		PrioValue aux = pq->arr[padre];
 		pq->arr[padre] = pq->arr[hijoDerecho];
 		pq->arr[hijoDerecho] = aux;
