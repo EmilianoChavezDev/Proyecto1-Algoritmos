@@ -40,7 +40,7 @@ PQ* pq_create();
 
 /*
   Agrega un valor a la cola con la prioridad dada
-  
+
   retorna TRUE si tuvo exito, FALSE si no
 */
 BOOLEAN pq_add(PQ* pq, void* valor, int prioridad);
@@ -65,7 +65,6 @@ BOOLEAN pq_destroy(PQ* pq);
 
 PrioValue value_create(void* value, int prioridad);
 
-BOOLEAN imprimir_lista(PQ* pq);
 
 void leer_archivo(char* archivo, PQ* pq);
 

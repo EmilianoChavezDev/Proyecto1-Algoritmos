@@ -122,15 +122,6 @@ BOOLEAN redimensionar(PQ* pq) {
 }
 
 
-BOOLEAN imprimir_lista(PQ* pq) {
-	for (int i = 1; i <= pq->size - 1; i++) {
-		char caracter = pq->arr[i]->value;
-		int prio = pq->arr[i]->prio;
-		printf_s("%c , %i \n", caracter, prio);
-	}
-	return TRUE;
-}
-
 void leer_archivo(char* archivo, PQ* pq) {
 	FILE* f = fopen(archivo, "r");
 	confirmNotNull(archivo, "Error al obtener el archivo");

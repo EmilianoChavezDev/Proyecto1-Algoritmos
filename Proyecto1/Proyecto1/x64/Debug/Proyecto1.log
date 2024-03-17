@@ -1,4 +1,18 @@
 ﻿  Main.c
+  pq.c
 C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\Main.c(15,10): warning C4477: 'printf' : la cadena de formato '%c' requiere un argumento de tipo 'int', pero el argumento variádico 1 tiene el tipo 'void *'
 C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\Main.c(15,10): warning C4313: 'printf': '%c' en la cadena de formato entra en conflicto con el argumento 1 de tipo 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(27,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(28,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(51,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(70,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(78,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(102,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(108,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(127,2): warning C4098: 'leer_archivo': función 'void' que devuelve un valor
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(147,41): warning C4022: 'pq_add': no coincide el puntero para el parámetro real 2
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(155,2): warning C4047: 'return': 'int' es distinto en los niveles de direccionamiento indirecto de 'void *'
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(156,14): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+  Generando código...
+C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\Proyecto1\pq.c(173): warning C4715: 'propagarArriba': no todas las rutas de acceso de control devuelven un valor
   Proyecto1.vcxproj -> C:\Users\PC\Desktop\Proyecto1-Algoritmos\Proyecto1\x64\Debug\Proyecto1.exe
